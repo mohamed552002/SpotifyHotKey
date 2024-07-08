@@ -17,10 +17,12 @@ class Spotify:
     def Toggle(self):
         if(self.spotify_window == ""):
             self.GetSpotifyWindow()
+        print(self.spotify_window.window_text())
         self.spotify_window.restore()
-        self.spotify_window.type_keys('{SPACE}')
-        self.spotify_window.minimize()
         time.sleep(0.1)  
+        self.spotify_window.type_keys('{SPACE}')
+        time.sleep(0.2)  
+        self.spotify_window.minimize()
     def Next(self):
         self.spotify_window.restore()
         time.sleep(0.3)
