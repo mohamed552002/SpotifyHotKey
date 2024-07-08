@@ -12,7 +12,8 @@ class Spotify:
                 self.spotify_window = window
                 break
         else:
-            raise RuntimeError("Spotify window not found")
+            print("Spotify window not found")
+            print("Please Ensure that Spotify is running and no song is played")
     def Toggle(self):
         if(self.spotify_window == ""):
             self.GetSpotifyWindow()
